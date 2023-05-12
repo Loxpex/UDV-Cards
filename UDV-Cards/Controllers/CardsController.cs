@@ -51,10 +51,9 @@ namespace UDV_Cards.Controllers
             }
             if (Deck.Shuffle(name, _configuration["SortType"]))
             {
-                return "WrongConfigOrDeckName";
+                return _configuration["SortType"];
             }
-            return _configuration["SortType"];
-        }
-        
+            return "WrongConfigOrDeckName";
+        }   
     }
 }
